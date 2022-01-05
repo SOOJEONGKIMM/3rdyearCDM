@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>안암병원 상위 질병 수술 생존분석</title>
+{% load static %}
+<script
+      type="text/javascript"
+      src="{% static 'fusioncharts/fusioncharts.js' %}"
+    ></script>
+    <script
+      type="text/javascript"
+      src="{% static 'fusioncharts/themes/fusioncharts.theme.fint.js' %}"
+    ></script>
+</head>
+<body>
+
+<h3>Essential hypertension</h3>
+<div style="float: left; width: 50%;">
+{{ graph_div1|safe }}
+</div>
+
+<h3>Type 2 diabetes mellitus without complication</h3>
+<div style="float: left; width: 50%;">
+{{ graph_div2|safe }}
+</div>
+
+<h3>Gastroesophageal reflux disease without esophagitis</h3>
+<div style="float: left; width: 50%;">
+{{ graph_div3|safe }}
+</div>
+
+<h3>Gastritis</h3>
+<div style="float: left; width: 50%;">
+{{ graph_div4|safe }}
+</div>
+
+<h3>Gastro-esophageal reflux disease with esophagitis</h3>
+<div>
+{{ graph_div5|safe }}
+</div>
+
+
+
+</body>
+</html>

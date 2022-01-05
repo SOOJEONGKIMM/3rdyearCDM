@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>다기관 환자 내원 데이터</title>
+{% load static %}
+<script
+      type="text/javascript"
+      src="{% static 'fusioncharts/fusioncharts.js' %}"
+    ></script>
+    <script
+      type="text/javascript"
+      src="{% static 'fusioncharts/themes/fusioncharts.theme.fint.js' %}"
+    ></script>
+</head>
+<body>
+<h2> 기관 별 환자 내원 데이터</h2>
+<div id="chart-1"></div>
+<div id="chart-2"></div>
+<div id="chart-3"></div>
+{{ output1|safe }}
+{{ output2|safe }}
+{{ output3|safe }}
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>다기관 환자 분포</title>
+{% load static %}
+    <script
+      type="text/javascript"
+      src="{% static 'fusioncharts/fusioncharts.js' %}"
+    ></script>
+    <script
+      type="text/javascript"
+      src="{% static 'fusioncharts/themes/fusioncharts.theme.fint.js' %}"
+    ></script>
+</head>
+<body>
+<h2>*1.환자군 분포표*</h2>
+<tr>
+<h2>-기관 별 내원 환자 성별</h2>
+</tr>
+
+<div style="float: left; width: 20%;" id="chart-1"></div> 
+<div style="float: left; width: 20%;" id="chart-3"></div>
+<div style="float: left; width: 60%;" id="chart-4"></div>
+
+{{ output1|safe }}
+{{ output3|safe }}
+{{ output4|safe }}
+
+</br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
+<table border="1" style="float: left; margin: 10px;">
+	<th></th>
+	<th>안암.안산</th>
+	<th>안암.구로</th>
+	<th>안산.구로</th>
+	<tr>
+      <td>T-test</td>
+      <td>{{ st.0.0 }}</td>
+      <td>{{ st.1.0 }}</td>
+      <td>{{ st.2.0 }}</td>
+      </tr>
+    <tr>
+      <td>P-value</td>
+      <td>{{ st.0.1 }}</td>
+      <td>{{ st.1.1 }}</td>
+      <td>{{ st.2.1 }}</td>
+    </tr>
+</table>
+
+<table border="1" style="float: left; margin: 10px;">
+	<th></th>
+	<th>안암.안산</th>
+	<th>안암.구로</th>
+	<th>안산.구로</th>
+	<tr>
+      <td>Pearson</td>
+      <td>{{ st2.0.0 }}</td>
+      <td>{{ st2.1.0 }}</td>
+      <td>{{ st2.2.0 }}</td>
+      </tr>
+    <tr>
+      <td>P-value</td>
+      <td>{{ st2.0.1 }}</td>
+      <td>{{ st2.1.1 }}</td>
+      <td>{{ st2.2.1 }}</td>
+    </tr>
+</table>
+
+<table border="1" style="float: center; margin: 10px;">
+	<th></th>
+	<th>MALE</th>
+	<th>FEMALE</th>
+	<tr>
+      <td>Chi-Square</td>
+      <td>{{ st1.0.0.0 }}</td>
+      <td>{{ st1.0.0.1 }}</td>
+      </tr>
+    <tr>
+      <td>P-value</td>
+      <td>{{ st1.0.1.0 }}</td>
+      <td>{{ st1.0.1.1 }}</td>
+    </tr>
+</table>
+</br>
+
+	
+<h2> -기관 별 내원 환자 나이대 분포(생년 데이터)</h2>
+<div id="chart-2"></div>
+{{ output2|safe }}
+</body>
+</html>
