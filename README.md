@@ -8,7 +8,7 @@ Development and Application of CDM Extention Model and Tool using Unstructured D
 
 
 ---
-###Achilles DQM 기능 확장 툴 개발
+### Achilles DQM 기능 확장 툴 개발
 
 (http://www.ohdsi.org/web/achilles) 에서 확인 가능
 ![image](https://user-images.githubusercontent.com/48557539/193769178-9f0c9f2d-fe93-4ce0-bc08-f44f2f502361.png)
@@ -16,7 +16,7 @@ Development and Application of CDM Extention Model and Tool using Unstructured D
 OHDSI-Achilles 데이터 분석 예시
 
 ---
-###EDA 확장 툴 개발:
+### EDA 확장 툴 개발:
 
 CDM 데이터베이스 분석 이전 단계인 EDA 툴 개발.
 EDA 툴은 데이터의 분포를 테이블 혹은 그래프 형태로 출력하는 기능을 포함하며, 이상치 검출(Outlier Detection), 결측치 대체(Missing value Imputation) 등의 부가적 기능 개발을 고려함.
